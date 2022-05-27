@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1063165966107",
+    "project_id": "farhati-49beb",
+    "storage_bucket": "farhati-49beb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063165966107:android:5e47d7b6a7fe8e6acac5be",
+        "android_client_info": {
+          "package_name": "com.example.farhati"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063165966107-9jkdua6a9bdt45tm6qvrsp6bi6adn71m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATCdXo_bs8tqfsPTrSSN44B_FNly6g8t0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063165966107-9jkdua6a9bdt45tm6qvrsp6bi6adn71m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -6,7 +6,14 @@ class Preview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //  var size = MediaQuery.of(context).size;
-
+    List<String> list = [
+      'images/gold.png',
+      'images/gold1.png',
+      'images/gold2.png',
+      'images/dreams.png',
+      'images/dreams1.png',
+      // 'images/dreams2.png',
+    ];
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.grey.shade300,
@@ -19,7 +26,7 @@ class Preview extends StatelessWidget {
               )),
         ],
       ),
-      body: Container(
+      body: SizedBox(
         // color: Colors.grey,
         // margin: const EdgeInsets.only(top: 10),
         width: double.infinity,
@@ -27,53 +34,56 @@ class Preview extends StatelessWidget {
           padding: const EdgeInsets.only(left: 5),
           child: GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  childAspectRatio: (2),
+                  childAspectRatio: (2.5),
                   crossAxisCount: 1,
-                  crossAxisSpacing: 1),
-              itemCount: 10,
+                  crossAxisSpacing: 5),
+              itemCount: list.length,
               itemBuilder: (BuildContext ctx, index) {
-                return Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      // mainAxisAlignment: MainAxisAlignment.end,
-                      children: const [
-                        Image(
-                          image: AssetImage("images/gold.png"),
-                          fit: BoxFit.contain,
-                          // height: 200,
-                          width: 150,
+                return Card(
+                  elevation: 8,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(
+                        // mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Image(
+                            image: AssetImage(list[index]),
+                            fit: BoxFit.contain,
+                            height: 134,
+                            width: 149,
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        width: 69,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(
+                              "وصف الصورة",
+                              // style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            Center(child: Text(".........")),
+                          ],
                         ),
-                      ],
-                    ),
-                    SizedBox(
-                      width: 69,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text(
-                            "وصف الصورة",
-                            // style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          Center(child: Text(".........")),
-                        ],
                       ),
-                    ),
-                    SizedBox(
-                      width: 129,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text(
-                            "تم رفع الصورة بواسطة",
-                            // style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          Center(child: Text("abc@gmail.com")),
-                        ],
+                      SizedBox(
+                        width: 129,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(
+                              " الصورة بواسطة",
+                              // style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            Center(child: Text("abc@gmail.com")),
+                          ],
+                        ),
                       ),
-                    ),
-                    //     borderRadius: BorderRadius.circular(15)),
-                  ],
+                      //     borderRadius: BorderRadius.circular(15)),
+                    ],
+                  ),
                 );
               }),
         ),

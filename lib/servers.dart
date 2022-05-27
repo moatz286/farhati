@@ -1,3 +1,5 @@
+import 'package:farhati/contact.dart';
+import 'package:farhati/resrve.dart';
 import 'package:flutter/material.dart';
 
 class Servers extends StatelessWidget {
@@ -29,7 +31,10 @@ class Servers extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Reserve()));
+                },
                 child: const Text(
                   "قم بالحجز الان",
                 ),
@@ -41,7 +46,10 @@ class Servers extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 20),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Contact()));
+                },
                 // style: const ButtonStyle(backgroundColor: Colors.white,),
                 child: const Text(
                   "اتصل بنا",
